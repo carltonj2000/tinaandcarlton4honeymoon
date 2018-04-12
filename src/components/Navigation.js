@@ -27,25 +27,17 @@ const styleActive = {
 
 export default () => (
   <Container>
-    <NavLink exact to={Routes.home} style={style} activeStyle={styleActive}>
-      Home
+    <NavLink to={Routes.melbourne} style={style} activeStyle={styleActive}>
+      Melbourne
     </NavLink>
-    {/*
-    <NavLink to={Routes.directions} style={style} activeStyle={styleActive}>
-      Directions
+    <NavLink to={Routes.sydney} style={style} activeStyle={styleActive}>
+      Sydney
     </NavLink>
-    <NavLink to={Routes.schedule} style={style} activeStyle={styleActive}>
-      Schedule
+    <NavLink to={Routes.macquarie} style={style} activeStyle={styleActive}>
+      Port Macquarie
     </NavLink>
-    <NavLink to={Routes.seating} style={style} activeStyle={styleActive}>
-      Seating
+    <NavLink to={Routes.brisbane} style={style} activeStyle={styleActive}>
+      Brisbane
     </NavLink>
-    <NavLink to={Routes.cars} style={style} activeStyle={styleActive}>
-      Cars
-    </NavLink>
-    <NavLink to={Routes.support} style={style} activeStyle={styleActive}>
-      Support
-    </NavLink>
-      */}
   </Container>
 );

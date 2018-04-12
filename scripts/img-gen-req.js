@@ -17,14 +17,23 @@ let imgExports = [];
 
 const gen = sz => {
   images.reduce((a, image) => {
-    const baseName = image.file.split(".")[0];
+    const partNames = image.file.split(".");
+    if (partNames.slice(-1)[0] === "JPG") return; /* remove me. bug avoidence */
+    const baseName = partNames[0];
     imgConst.push(
       `const ${baseName}_${sz} = require("../images/resized/size_${sz}/${
         image.file
       }")`
     );
+    const last = image.groups.length - 1;
+    const groups =
+      image.groups.reduce((a, group, i) => {
+        return `${a} "${group}" ${i === last ? "" : ","}`;
+      }, "[") + "]";
     imgExports.push(
-      `{ name: ${baseName}_${sz}, description: "${image.description}" },`
+      `{ name: ${baseName}_${sz}, description: "${
+        image.description
+      }", groups: ${groups} },`
     );
   }, []);
 };

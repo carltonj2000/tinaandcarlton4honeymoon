@@ -1,3 +1,5 @@
+const path = require("path");
+const fs = require("fs");
 module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
   const imageDirsAll = [
     {
@@ -79,6 +81,58 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
           dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia5Sydney2/"
         }
       ]
+    },
+    {
+      index: "8",
+      description: "Australia Sydney Bondi Beach",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia6Sydney3/"
+        }
+      ]
+    },
+    {
+      index: "9",
+      description: "Australia Sydney",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia7Sydney4/"
+        }
+      ]
+    },
+    {
+      index: "10",
+      description: "Australia Sydney Blue Mountains",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia8Sydney5/"
+        }
+      ]
+    },
+    {
+      index: "11",
+      description: "Port Macquarie",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir:
+            "/Users/carltonjoseph/cj/cjpics2018/australia/australia9Syd2Bris/"
+        }
+      ]
+    },
+    {
+      index: "12",
+      description: "Brisbane",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir:
+            "/Users/carltonjoseph/cj/cjpics2018/australia/australia91Brisbane/"
+        }
+      ]
     }
   ];
 
@@ -96,7 +150,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       dir: getDir("1").location.dir,
       description: getDir("1").description,
       images: [
-        { file: "IMG_0394.thumb.jpg", groups: ["melbourne", "dandenongs"] },
+        {
+          file: "IMG_0394.thumb.jpg",
+          groups: ["melbourne", "dandenongs"],
+          main: "image"
+        },
         { file: "IMG_0419.thumb.jpg", groups: ["melbourne", "dandenongs"] },
         { file: "IMG_0428.thumb.jpg", groups: ["melbourne", "dandenongs"] },
         { file: "IMG_0449.thumb.jpg", groups: ["melbourne", "dandenongs"] },
@@ -131,7 +189,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
         { file: "IMG_0569.thumb.jpg", groups: ["melbourne"] },
         { file: "IMG_0578.thumb.jpg", groups: ["melbourne"] },
         { file: "IMG_0590.thumb.jpg", groups: ["melbourne"] },
-        { file: "IMG_0594.jpg", groups: ["melbourne"] },
+        { file: "IMG_0594.JPG", groups: ["melbourne"] },
         { file: "IMG_0603.thumb.jpg", groups: ["melbourne"] },
         { file: "IMG_0609.thumb.jpg", groups: ["melbourne"] },
         { file: "IMG_0610.thumb.jpg", groups: ["melbourne"] },
@@ -179,7 +237,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       dir: getDir("6").location.dir,
       description: getDir("6").description,
       images: [
-        { file: "IMG_1119.jpg", groups: ["sydney"] },
+        { file: "IMG_1119.JPG", groups: ["sydney"] },
         { file: "IMG_1125.thumb.jpg", groups: ["sydney"] },
         { file: "IMG_1127.thumb.jpg", groups: ["sydney"] },
         { file: "IMG_1137.thumb.jpg", groups: ["sydney"] },
@@ -194,15 +252,118 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
         { file: "IMG_1193.thumb.jpg", groups: ["sydney"] },
         { file: "IMG_1200.thumb.jpg", groups: ["sydney"] },
         { file: "IMG_1238.thumb.jpg", groups: ["sydney"] },
-        { file: "IMG_1240.thumb.jpg", groups: ["sydney"], best: "main" },
+        { file: "IMG_1240.thumb.jpg", groups: ["sydney"], main: "image" },
         { file: "IMG_1245.thumb.jpg", groups: ["sydney"] },
-        { file: "IMG_1261.jpg", groups: ["sydney"] },
+        { file: "IMG_1261.JPG", groups: ["sydney"] },
         { file: "IMG_1279.thumb.jpg", groups: ["sydney"] },
         { file: "IMG_1293.thumb.jpg", groups: ["sydney"] },
         { file: "IMG_1296.thumb.jpg", groups: ["sydney"] },
         { file: "IMG_1307.thumb.jpg", groups: ["sydney"] },
         { file: "IMG_1317.thumb.jpg", groups: ["sydney"] },
-        { file: "IMG_1332.thumb.jpg", groups: ["sydney"] }
+        { file: "IMG_1332.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1343.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1355.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1357.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1381.thumb.jpg", groups: ["sydney"] }
+      ]
+    },
+    {
+      dir: getDir("8").location.dir,
+      description: getDir("8").description,
+      images: [
+        { file: "IMG_1389.thumb.jpg", groups: ["sydney", "bondi"] },
+        { file: "IMG_1392.thumb.jpg", groups: ["sydney", "bondi"] },
+        { file: "IMG_1404.thumb.jpg", groups: ["sydney", "bondi"] },
+        { file: "IMG_1405.thumb.jpg", groups: ["sydney", "bondi"] },
+        { file: "IMG_1415.thumb.jpg", groups: ["sydney", "bondi"] },
+        { file: "IMG_1427.thumb.jpg", groups: ["sydney", "bondi"] },
+        { file: "IMG_1445.thumb.jpg", groups: ["sydney", "bondi"] },
+        { file: "IMG_1458.thumb.jpg", groups: ["sydney", "bondi"] },
+        { file: "IMG_1462.thumb.jpg", groups: ["sydney", "bondi"] },
+        {
+          file: "IMG_1497.thumb.jpg",
+          groups: ["sydney"],
+          description: "Opera House"
+        }
+      ]
+    },
+    {
+      dir: getDir("9").location.dir,
+      description: getDir("9").description,
+      images: [
+        { file: "IMG_1521.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1524.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1546.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1553.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1555.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1563.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1567.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1571.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1573.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1581.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1582.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1589.thumb.jpg", groups: ["sydney"] }
+      ]
+    },
+    {
+      dir: getDir("10").location.dir,
+      description: getDir("10").description,
+      images: [
+        { file: "IMG_1613.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1618.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1631.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1646.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1651.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1663.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1672.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1680.thumb.jpg", groups: ["sydney"] },
+        { file: "IMG_1687.thumb.jpg", groups: ["sydney"] }
+      ]
+    },
+    {
+      dir: getDir("11").location.dir,
+      description: getDir("11").description,
+      images: [
+        { file: "IMG_1704.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1707.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1709.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1710.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1714.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1720.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1731.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1733.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1751.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1780.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1790.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1793.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1797.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1808.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1809.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1814.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1818.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1823.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1831.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1833.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1837.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1839.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1840.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1846.thumb.jpg", groups: ["macquarie"] },
+        { file: "IMG_1856.thumb.jpg", groups: ["macquarie"] }
+      ]
+    },
+    {
+      dir: getDir("12").location.dir,
+      description: getDir("12").description,
+      images: [
+        { file: "IMG_1878.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_1880.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_1883.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_1890.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_1895.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_1904.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_1905.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_1914.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_1920.thumb.jpg", groups: ["brisbane"] }
       ]
     }
   ];
@@ -220,6 +381,36 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
     a.push(...images);
     return a;
   }, []);
+
+  const uniqueIndex = () => {
+    imageDirsAll.reduce((a, d) => {
+      if (a.includes(d.index)) {
+        console.log(`index ${d.index} is not allowed to be used twice`);
+        process.exit(-1);
+      }
+      a.push(d.index);
+      return a;
+    }, []);
+  };
+
+  const imagesExists = images => {
+    images.reduce((a, d) => {
+      const file = path.join(d.dir, d.file);
+      if (!fs.existsSync(file)) {
+        console.log(`file ${d.file} not found in ${d.dir}`);
+        process.exit(-1);
+      }
+      if (a.includes(file)) {
+        console.log(`duplicate definition for file ${d.file} in ${d.dir}`);
+        process.exit(-1);
+      }
+      a.push(file);
+      return a;
+    }, []);
+  };
+
+  uniqueIndex();
+  imagesExists(images);
 
   return images;
 };

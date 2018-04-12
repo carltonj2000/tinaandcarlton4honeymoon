@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import styled from "styled-components";
 
 import Layout from "./Layout.js";
@@ -18,14 +18,12 @@ class App extends Component {
     return (
       <Router>
         <Container>
-          <Layout active="home">
-            <Route exact path={Routes.home} component={Home} />
-            {/*
-            <Route path={Routes.melbourne} component={Melbourne} />
-            <Route path={Routes.sydney} component={Sydney} />
-            <Route path={Routes.brisbane} component={Brisbane} />
-            <Route path={Routes.cairns} component={Cairns} />
-            */}
+          <Layout active="melbourne">
+            <Route path={Routes.melbourne} component={Home} />
+            <Route path={Routes.sydney} component={Home} />
+            <Route path={Routes.macquarie} component={Home} />
+            <Route path={Routes.brisbane} component={Home} />
+            <Redirect to={Routes.melbourne} />
           </Layout>
         </Container>
       </Router>

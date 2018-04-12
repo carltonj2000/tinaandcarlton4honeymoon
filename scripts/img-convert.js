@@ -3,11 +3,12 @@
 // image optimizations from
 // https://developers.google.com/speed/docs/insights/OptimizeImages
 
+const os = require("os");
 const fs = require("fs");
 const path = require("path");
 const { execSync, mkdirSync } = require("child_process");
 
-const { images } = require("../src/utils/images");
+const images = require("./images")(os.hostname());
 
 const sizes = ["1620x1080", "405x270", "81x54"];
 

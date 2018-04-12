@@ -22,7 +22,6 @@ class PhotosComponent extends React.Component {
 
   render() {
     const { images, photoModalOpen } = this.props;
-    console.log(images);
     if (this.state.hasError || !images) {
       return <h1>Something went wrong during photo loading.</h1>;
     }

@@ -6,10 +6,9 @@ import PhotoModal from "./PhotoModal.js";
 
 import {
   images_81x54,
-  images_405x270,
+  //  images_405x270,
   images_1620x1080
 } from "../utils/images";
-const images = images_81x54;
 
 const Container = styled.div`
   display: flex;
@@ -20,24 +19,30 @@ const Container = styled.div`
 `;
 
 class Home extends Component {
-  state = { isOpen: false, img: "", imgIdx: -1 };
+  state = { isOpen: false, img: "", imgIdx: -1, imagesSmall: [], images: [] };
   openModal = idx => {
     window.scrollTo(0, 0);
-    return this.setState({
+    return this.setState(state => ({
       isOpen: true,
-      img: images_1620x1080[idx],
+      img: state.images[idx],
       imgIdx: idx
-    });
+    }));
   };
   closeModal = () => this.setState({ isOpen: false });
   nextImg = by =>
     this.setState(state => {
-      let imgIdx = (state.imgIdx + by) % images.length;
-      if (imgIdx < 0) imgIdx = images.length - 1;
-      return { img: images_1620x1080[imgIdx], imgIdx: imgIdx };
+      let imgIdx = (state.imgIdx + by) % state.images.length;
+      if (imgIdx < 0) imgIdx = state.images.length - 1;
+      return { img: state.images[imgIdx], imgIdx: imgIdx };
     });
+  componentWillMount() {
+    const group = this.props.match.url.split("/").slice(-1)[0];
+    this.setState({
+      imagesSmall: images_81x54.filter(image => image.groups.includes(group)),
+      images: images_1620x1080.filter(image => image.groups.includes(group))
+    });
+  }
   render() {
-    console.log("home", images);
     return (
       <Container>
         <PhotoModal
@@ -46,7 +51,10 @@ class Home extends Component {
           img={this.state.img}
           nextImg={this.nextImg}
         />
-        <Photos images={images} photoModalOpen={this.openModal} />
+        <Photos
+          images={this.state.imagesSmall}
+          photoModalOpen={this.openModal}
+        />
       </Container>
     );
   }

@@ -23,6 +23,7 @@ class App extends Component {
             <Route path={Routes.sydney} component={Home} />
             <Route path={Routes.macquarie} component={Home} />
             <Route path={Routes.brisbane} component={Home} />
+            <Route path={Routes.cairns} component={Home} />
             <Redirect to={Routes.melbourne} />
           </Layout>
         </Container>

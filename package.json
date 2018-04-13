@@ -31,6 +31,6 @@
       "docker run --name honeymoon1 -p 49160:5000 -v /Users/carltonjoseph/cj/cj2018/code/tinaandcarlton2/tinaandcarlton4honeymoon:/usr/src/app -d honeymoon",
     "docker:it": "docker exec -it weddinginvite1 /bin/bash"
   },
-  "homepagelocal": "https://tinaandcarltonhome.com/wedding",
-  "homepageweb": "https://tinaandcarlton.com/wedding"
+  "homepagelocal": "https://tinaandcarltonhome.com/honeymoon",
+  "homepage": "https://tinaandcarlton.com/honeymoon"
 }

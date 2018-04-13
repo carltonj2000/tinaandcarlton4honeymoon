@@ -133,6 +133,69 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
             "/Users/carltonjoseph/cj/cjpics2018/australia/australia91Brisbane/"
         }
       ]
+    },
+    {
+      index: "13",
+      description: "Cairns",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia92Cairns/"
+        }
+      ]
+    },
+    {
+      index: "14",
+      description: "Cairns",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia93Cairns/"
+        }
+      ]
+    },
+    {
+      index: "15",
+      description: "Cairns",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia94Cairns/"
+        }
+      ]
+    },
+    {
+      index: "16",
+      description: "Brisbane",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir:
+            "/Users/carltonjoseph/cj/cjpics2018/australia/australia95Brisbane/"
+        }
+      ]
+    },
+    {
+      index: "17",
+      description: "Brisbane",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir:
+            "/Users/carltonjoseph/cj/cjpics2018/australia/australia96Brisbane/"
+        }
+      ]
+    },
+    {
+      index: "18",
+      description: "Brisbane",
+      locations: [
+        {
+          machine: "CARLTONs-MacBook-Pro.local",
+          dir:
+            "/Users/carltonjoseph/cj/cjpics2018/australia/australia97Brisbane/"
+        }
+      ]
     }
   ];
 
@@ -246,6 +309,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       ]
     },
     {
+      skip: true,
       dir: getDir("7").location.dir,
       description: getDir("7").description,
       images: [
@@ -268,6 +332,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       ]
     },
     {
+      skip: true,
       dir: getDir("8").location.dir,
       description: getDir("8").description,
       images: [
@@ -288,6 +353,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       ]
     },
     {
+      skip: true,
       dir: getDir("9").location.dir,
       description: getDir("9").description,
       images: [
@@ -306,6 +372,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       ]
     },
     {
+      skip: true,
       dir: getDir("10").location.dir,
       description: getDir("10").description,
       images: [
@@ -321,6 +388,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       ]
     },
     {
+      skip: true,
       dir: getDir("11").location.dir,
       description: getDir("11").description,
       images: [
@@ -352,6 +420,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       ]
     },
     {
+      skip: true,
       dir: getDir("12").location.dir,
       description: getDir("12").description,
       images: [
@@ -365,11 +434,115 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
         { file: "IMG_1914.thumb.jpg", groups: ["brisbane"] },
         { file: "IMG_1920.thumb.jpg", groups: ["brisbane"] }
       ]
+    },
+    {
+      skip: true,
+      dir: getDir("13").location.dir,
+      description: getDir("13").description,
+      images: [
+        { file: "IMG_1928.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_1929.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_1943.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_1957.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_1961.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_1966.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_1974.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_1983.thumb.jpg", groups: ["cairns"] }
+      ]
+    },
+    {
+      skip: true,
+      dir: getDir("14").location.dir,
+      description: getDir("14").description,
+      images: [
+        { file: "IMG_2000.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2001.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2015.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2018.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2020.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2038.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2058.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2066.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2106.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2109.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2118.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2127.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2137.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2145.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2179.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2192.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2194.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2199.thumb.jpg", groups: ["cairns"] }
+      ]
+    },
+    {
+      skip: true,
+      dir: getDir("15").location.dir,
+      description: getDir("15").description,
+      images: [
+        { file: "IMG_2206.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2209.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2220.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2223.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2227.thumb.jpg", groups: ["cairns"] },
+        { file: "IMG_2231.thumb.jpg", groups: ["cairns"] }
+      ]
+    },
+    {
+      dir: getDir("16").location.dir,
+      description: getDir("16").description,
+      images: [
+        { file: "IMG_2239.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2248.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2256.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2265.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2266.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2282.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2300.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2306.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2316.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2328.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2330.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2338.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2343.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2350.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2354.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2374.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2375.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2393.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2396.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2407.thumb.jpg", groups: ["brisbane"] }
+      ]
+    },
+    {
+      dir: getDir("17").location.dir,
+      description: getDir("17").description,
+      images: [
+        { file: "IMG_2409.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2410.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2417.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2420.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2424.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2425.thumb.jpg", groups: ["brisbane"] }
+      ]
+    },
+    {
+      dir: getDir("18").location.dir,
+      description: getDir("18").description,
+      images: [
+        { file: "IMG_2426.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2429.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2439.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2448.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2476.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2497.thumb.jpg", groups: ["brisbane"] },
+        { file: "IMG_2499.thumb.jpg", groups: ["brisbane"] }
+      ]
     }
   ];
 
   const images = imagesDirs.reduce((a, dir) => {
-    //if (dir.skip) return a;
+    // if (dir.skip) return a; // uncomment not to convert file repetitively
     const images = dir.images.reduce((a2, img) => {
       a2.push({
         dir: dir.dir,

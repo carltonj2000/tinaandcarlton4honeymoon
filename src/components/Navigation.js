@@ -39,5 +39,8 @@ export default () => (
     <NavLink to={Routes.brisbane} style={style} activeStyle={styleActive}>
       Brisbane
     </NavLink>
+    <NavLink to={Routes.cairns} style={style} activeStyle={styleActive}>
+      Cairns
+    </NavLink>
   </Container>
 );

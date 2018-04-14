@@ -6,7 +6,7 @@ import PhotoModal from "./PhotoModal.js";
 
 import {
   images_81x54,
-  //  images_405x270,
+  images_405x270,
   images_1620x1080
 } from "../utils/images";
 
@@ -19,26 +19,46 @@ const Container = styled.div`
 `;
 
 class Home extends Component {
-  state = { isOpen: false, img: "", imgIdx: -1, imagesSmall: [], images: [] };
+  state = {
+    isOpen: false,
+    img: "",
+    imgIdx: -1,
+    imagesSmall: [],
+    imagesMedium: [],
+    images: [],
+    hd: false
+  };
   openModal = idx => {
     window.scrollTo(0, 0);
     return this.setState(state => ({
       isOpen: true,
-      img: state.images[idx],
+      img: state.hd ? state.images[idx] : state.imagesMedium[idx],
       imgIdx: idx
     }));
   };
   closeModal = () => this.setState({ isOpen: false });
+  toggleHd = () =>
+    this.setState(
+      state => ({ ...state, hd: !state.hd }),
+      () => this.nextImg(0)
+    );
   nextImg = by =>
     this.setState(state => {
       let imgIdx = (state.imgIdx + by) % state.images.length;
       if (imgIdx < 0) imgIdx = state.images.length - 1;
-      return { img: state.images[imgIdx], imgIdx: imgIdx };
+      return {
+        ...state,
+        img: state.hd ? state.images[imgIdx] : state.imagesMedium[imgIdx],
+        imgIdx: imgIdx
+      };
     });
   componentWillMount() {
     const group = this.props.match.url.split("/").slice(-1)[0];
     this.setState({
       imagesSmall: images_81x54.filter(image => image.groups.includes(group)),
+      imagesMedium: images_405x270.filter(image =>
+        image.groups.includes(group)
+      ),
       images: images_1620x1080.filter(image => image.groups.includes(group))
     });
   }
@@ -50,6 +70,8 @@ class Home extends Component {
           onClose={this.closeModal}
           img={this.state.img}
           nextImg={this.nextImg}
+          hd={this.state.hd}
+          toggleHd={this.toggleHd}
         />
         <Photos
           images={this.state.imagesSmall}

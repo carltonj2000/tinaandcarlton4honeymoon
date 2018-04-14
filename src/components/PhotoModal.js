@@ -12,7 +12,7 @@ const Backdrop = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 10px;
+  padding: 20px;
   margin-left: 10px;
 `;
 
@@ -51,6 +51,9 @@ export default props => {
       <Img src={props.img.name} />
       <Modal src={props.img.name}>
         <div className="close">
+          <Button onClick={props.toggleHd} title="select HD/SD images">
+            {props.hd ? <span>HD</span> : <span>SD</span>}
+          </Button>
           <Button onClick={props.onClose}>X</Button>
         </div>
         <div className="next">

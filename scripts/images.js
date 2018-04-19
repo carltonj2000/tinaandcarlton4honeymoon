@@ -4,7 +4,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
   const imageDirsAll = [
     {
       index: "1", // could be uuid but incrementing for now
-      description: "Australia Melbourne",
+      description: "Melbourne",
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
@@ -20,7 +20,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
     },
     {
       index: "2",
-      description: "Australia Melbourne",
+      description: "Melbourne",
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
@@ -31,7 +31,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
     },
     {
       index: "3",
-      description: "Australia Melbourne Great Ocean Road",
+      description: "Melbourne Great Ocean Road",
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
@@ -42,7 +42,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
     },
     {
       index: "4",
-      description: "Australia Melbourne",
+      description: "Melbourne",
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
@@ -53,7 +53,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
     },
     {
       index: "5",
-      description: "Australia Melbourne Downtown",
+      description: "Melbourne Downtown",
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
@@ -64,7 +64,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
     },
     {
       index: "6",
-      description: "Australia Sydney",
+      description: "Sydney",
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
@@ -74,7 +74,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
     },
     {
       index: "7",
-      description: "Australia Sydney",
+      description: "Sydney",
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
@@ -84,7 +84,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
     },
     {
       index: "8",
-      description: "Australia Sydney Bondi Beach",
+      description: "Sydney Bondi Beach",
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
@@ -94,7 +94,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
     },
     {
       index: "9",
-      description: "Australia Sydney",
+      description: "Sydney",
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
@@ -104,7 +104,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
     },
     {
       index: "10",
-      description: "Australia Sydney Blue Mountains",
+      description: "Sydney Blue Mountains",
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",

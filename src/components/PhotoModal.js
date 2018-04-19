@@ -11,16 +11,10 @@ const Backdrop = styled.div`
   background: rgba(0, 0, 0, 0.8);
 `;
 
-const Button = styled.button`
-  padding: 20px;
-  margin: 10px 10px;
-`;
-
 const Modal = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   z-index: 9999;
   position: absolute;
   top: 0;
@@ -28,15 +22,44 @@ const Modal = styled.div`
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center center;
   background-size: contain;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+`;
+
+const Button = styled.button`
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 5px;
 `;
 
 const Description = styled.div`
   padding: 10px;
-  margin: 10px;
-  font-size: 20px;
-  background: rgba(200, 200, 200, 0.8);
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  background: rgba(200, 200, 200, 0.5);
+`;
+
+const Top = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+const Bottom = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
 `;
 
 export default props => {
@@ -48,17 +71,19 @@ export default props => {
           backgroundImage: `url(${props.img.name})`
         }}
       >
-        <div className="close">
-          <Button onClick={props.onClose}>X</Button>
+        <Top>
           <Button onClick={props.toggleHd} title="select HD/SD images">
             {props.hd ? <span>HD</span> : <span>SD</span>}
           </Button>
-        </div>
-        <Description>{props.img.description}</Description>
-        <div className="next">
-          <Button onClick={() => props.nextImg(-1)}>&larr;</Button>
-          <Button onClick={() => props.nextImg(1)}>&rarr;</Button>
-        </div>
+          <Description>{props.img.description}</Description>
+          <Button onClick={props.onClose}>X</Button>
+        </Top>
+        <Container>
+          <Bottom>
+            <Button onClick={() => props.nextImg(-1)}>&larr;</Button>
+            <Button onClick={() => props.nextImg(1)}>&rarr;</Button>
+          </Bottom>
+        </Container>
       </Modal>
     </Backdrop>
   );

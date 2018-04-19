@@ -19,15 +19,28 @@ const Container = styled.div`
 `;
 
 class Home extends Component {
-  state = {
-    isOpen: false,
-    img: "",
-    imgIdx: -1,
-    imagesSmall: [],
-    imagesMedium: [],
-    images: [],
-    hd: false
-  };
+  constructor(props) {
+    super(props);
+    const group = this.props.match.url.split("/").slice(-1)[0];
+    const imagesSmall = images_81x54.filter(image =>
+      image.groups.includes(group)
+    );
+    const imagesMedium = images_405x270.filter(image =>
+      image.groups.includes(group)
+    );
+    const images = images_1620x1080.filter(image =>
+      image.groups.includes(group)
+    );
+    this.state = {
+      isOpen: false,
+      img: imagesMedium[0],
+      imgIdx: 0,
+      hd: false,
+      imagesSmall,
+      imagesMedium,
+      images
+    };
+  }
   openModal = idx => {
     window.scrollTo(0, 0);
     return this.setState(state => ({
@@ -52,16 +65,6 @@ class Home extends Component {
         imgIdx: imgIdx
       };
     });
-  componentWillMount() {
-    const group = this.props.match.url.split("/").slice(-1)[0];
-    this.setState({
-      imagesSmall: images_81x54.filter(image => image.groups.includes(group)),
-      imagesMedium: images_405x270.filter(image =>
-        image.groups.includes(group)
-      ),
-      images: images_1620x1080.filter(image => image.groups.includes(group))
-    });
-  }
   render() {
     return (
       <Container>

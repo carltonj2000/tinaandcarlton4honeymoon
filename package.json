@@ -17,20 +17,22 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "img-convert": "node ./scripts/img-convert.js",
-    "img-link": "node ./scripts/img-link.js",
+    "img:link": "node ./scripts/img-link.js",
     "img-gen-req": "node ./scripts/img-gen-req.js",
+    "img:cp": "node ./scripts/img-cp.js",
     "img-convert-db": "node --inspect-brk ./scripts/img-convert.js",
     "img-link-db": "node --inspect-brk ./scripts/img-link.js",
     "img-gen-req-db": "node --inspect-brk ./scripts/img-gen-req.js",
-    "rsync":
-      "rsync -avzL --exclude 'node_modules' ./ carltonj2000@carltonjoseph.com:/mnt/volume-sfo2-01/cj/tinaandcarltondotcom/honeymoon/",
+    "rsync": "rsync -avzL --exclude 'node_modules' ./ carltonj2000@carltonjoseph.com:/mnt/volume-sfo2-01/cj/tinaandcarltondotcom/honeymoon/",
     "toserver": "npm run build && npm run rsync",
     "start:server": "node server.js",
     "docker:build": "docker build -t honeymoon .",
-    "docker:run":
-      "docker run --name honeymoon1 -p 49160:5000 -v /Users/carltonjoseph/cj/cj2018/code/tinaandcarlton2/tinaandcarlton4honeymoon:/usr/src/app -d honeymoon",
-    "docker:it": "docker exec -it weddinginvite1 /bin/bash"
+    "docker:run": "docker run --name honeymoon1 -p 49160:5000 -v /Users/carltonjoseph/cj/cj2018/code/tinaandcarlton2/tinaandcarlton4honeymoon:/usr/src/app -d honeymoon",
+    "docker:it": "docker exec -it weddinginvite1 /bin/bash",
+    "rsync:mntsd": "rsync -a build/ /Volumes/cjs/cj/volume_sfo2_02/cj/tinaandcarlton/honeymoon/"
   },
   "homepagelocal": "https://tinaandcarltonhome.com/honeymoon",
-  "homepage": "https://tinaandcarlton.com/honeymoon"
+  "homepagelocal1": "http://tinaandcarlton.test/honeymoon",
+  "homepagefinal": "https://tinaandcarlton.com/honeymoon",
+  "homepage": "http://tinaandcarlton.test/honeymoon"
 }

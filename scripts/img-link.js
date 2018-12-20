@@ -7,12 +7,12 @@ const fs = require("fs");
 const path = require("path");
 const { execSync, mkdirSync } = require("child_process");
 
-const images = require("./images")();
+const images = require("./images")("workstation.local.mount", false);
 
 const sizes = ["1620x1080", "405x270", "81x54"];
 
 const link = sz => {
-  images.reduce((a, image) => {
+  images.map(image => {
     const src = path.resolve(image.dir, "resized", "size_" + sz, image.file);
     const dstd = path.resolve("./src/images/", "resized", "size_" + sz);
     const dst = path.resolve(dstd, image.file);
@@ -30,9 +30,7 @@ const link = sz => {
       stdout && console.log(`stdout: ${stdout}`);
       stderr && console.log(`stderr: ${stderr}`);
     });
-  }, []);
+  });
 };
 
-sizes.reduce((a, sz) => {
-  link(sz);
-}, []);
+sizes.map(sz => link(sz));

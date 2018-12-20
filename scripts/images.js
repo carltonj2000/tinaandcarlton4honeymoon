@@ -1,6 +1,13 @@
 const path = require("path");
 const fs = require("fs");
-module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
+
+/* carlton's macbook pro local storage (periodically cleaned due to hd size) */
+const cmpl = "/Users/carltonjoseph/cj/cjpics2018/australia/";
+/* carlton's macbook pro server mounted locally */
+//const cmpsml = "/Volumes/cj1Tera3/carltonData/cj_pics/pics2018/australia/";
+/* carlton's macbook pro locally copied but use the same name for linking */
+const cmpsml = "/Volumes/cjs/cj/volume_sfo2_02/cj_pics/pics2018/australia/";
+module.exports = (host = "workstation.local.mount", chkImgExist = true) => {
   const imageDirsAll = [
     {
       index: "1", // could be uuid but incrementing for now
@@ -8,13 +15,13 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Users/carltonjoseph/cj/cjpics2018/australia/australia1melbourne/107_0322/",
+          dir: cmpl + "australia1melbourne/107_0322/",
           description: "Dandenongs Mountains"
         },
         {
-          machine: "workstation",
-          dir: "tbd"
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia1melbourne/107_0322/",
+          description: "Dandenongs Mountains"
         }
       ]
     },
@@ -24,8 +31,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Users/carltonjoseph/cj/cjpics2018/australia/australia1melbourne/108_0323/"
+          dir: cmpl + "australia1melbourne/108_0323/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia1melbourne/108_0323/"
         }
       ]
     },
@@ -35,8 +45,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Users/carltonjoseph/cj/cjpics2018/australia/australia2greatOceanRd/108_0922/"
+          dir: cmpl + "australia2greatOceanRd/108_0922/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia2greatOceanRd/108_0922/"
         }
       ]
     },
@@ -46,8 +59,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Users/carltonjoseph/cj/cjpics2018/australia/australia2greatOceanRd/109_0923/"
+          dir: cmpl + "australia2greatOceanRd/109_0923/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia2greatOceanRd/109_0923/"
         }
       ]
     },
@@ -57,8 +73,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Users/carltonjoseph/cj/cjpics2018/australia/australia3mlbrnDownTown/"
+          dir: cmpl + "australia3mlbrnDownTown/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia3mlbrnDownTown/"
         }
       ]
     },
@@ -68,7 +87,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia4Sydney1/"
+          dir: cmpl + "australia4Sydney1/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia4Sydney1/"
         }
       ]
     },
@@ -78,7 +101,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia5Sydney2/"
+          dir: cmpl + "australia5Sydney2/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia5Sydney2/"
         }
       ]
     },
@@ -88,7 +115,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia6Sydney3/"
+          dir: cmpl + "australia6Sydney3/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia6Sydney3/"
         }
       ]
     },
@@ -98,7 +129,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia7Sydney4/"
+          dir: cmpl + "australia7Sydney4/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia7Sydney4/"
         }
       ]
     },
@@ -108,7 +143,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia8Sydney5/"
+          dir: cmpl + "australia8Sydney5/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia8Sydney5/"
         }
       ]
     },
@@ -118,8 +157,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Users/carltonjoseph/cj/cjpics2018/australia/australia9Syd2Bris/"
+          dir: cmpl + "australia9Syd2Bris/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia9Syd2Bris/"
         }
       ]
     },
@@ -129,8 +171,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Users/carltonjoseph/cj/cjpics2018/australia/australia91Brisbane/"
+          dir: cmpl + "australia91Brisbane/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia91Brisbane/"
         }
       ]
     },
@@ -140,7 +185,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia92Cairns/"
+          dir: cmpl + "australia92Cairns/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia92Cairns/"
         }
       ]
     },
@@ -150,7 +199,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia93Cairns/"
+          dir: cmpl + "australia93Cairns/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia93Cairns/"
         }
       ]
     },
@@ -160,7 +213,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir: "/Users/carltonjoseph/cj/cjpics2018/australia/australia94Cairns/"
+          dir: cmpl + "australia94Cairns/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia94Cairns/"
         }
       ]
     },
@@ -170,8 +227,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Users/carltonjoseph/cj/cjpics2018/australia/australia95Brisbane/"
+          dir: cmpl + "australia95Brisbane/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia95Brisbane/"
         }
       ]
     },
@@ -181,8 +241,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Users/carltonjoseph/cj/cjpics2018/australia/australia96Brisbane/"
+          dir: cmpl + "australia96Brisbane/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia96Brisbane/"
         }
       ]
     },
@@ -192,8 +255,11 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
       locations: [
         {
           machine: "CARLTONs-MacBook-Pro.local",
-          dir:
-            "/Users/carltonjoseph/cj/cjpics2018/australia/australia97Brisbane/"
+          dir: cmpl + "australia97Brisbane/"
+        },
+        {
+          machine: "workstation.local.mount",
+          dir: cmpsml + "australia97Brisbane/"
         }
       ]
     }
@@ -583,7 +649,7 @@ module.exports = (host = "CARLTONs-MacBook-Pro.local") => {
   };
 
   uniqueIndex();
-  imagesExists(images);
+  if (chkImgExist) imagesExists(images);
 
   return images;
 };

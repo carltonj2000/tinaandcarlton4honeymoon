@@ -1,12 +1,12 @@
 const path = require("path");
 const fs = require("fs");
 
-/* carlton's macbook pro local storage (periodically cleaned due to hd size) */
+/* chose cmpl base on image location */
 const cmpl = "/Users/carltonjoseph/cj/cjpics2018/australia/";
-/* carlton's macbook pro server mounted locally */
+/* chose cmpsml base on image location */
 //const cmpsml = "/Volumes/cj1Tera3/carltonData/cj_pics/pics2018/australia/";
-/* carlton's macbook pro locally copied but use the same name for linking */
-const cmpsml = "/Volumes/cjs/cj/volume_sfo2_02/cj_pics/pics2018/australia/";
+//const cmpsml = "/Volumes/cjs/cj/volume_sfo2_02/cj_pics/pics2018/australia/";
+const cmpsml = "/mnt/volume_sfo2_02/cj_pics/pics2018/australia/";
 module.exports = (host = "workstation.local.mount", chkImgExist = true) => {
   const imageDirsAll = [
     {

@@ -29,7 +29,8 @@
     "docker:build": "docker build -t honeymoon .",
     "docker:run": "docker run --name honeymoon1 -p 49160:5000 -v /Users/carltonjoseph/cj/cj2018/code/tinaandcarlton2/tinaandcarlton4honeymoon:/usr/src/app -d honeymoon",
     "docker:it": "docker exec -it weddinginvite1 /bin/bash",
-    "rsync:mntsd": "rsync -a build/ /Volumes/cjs/cj/volume_sfo2_02/cj/tinaandcarlton/honeymoon/"
+    "rsync:mntsd": "rsync -a build/ /Volumes/cjs/cj/volume_sfo2_02/cj/tinaandcarlton/honeymoon/",
+    "rsync:dolocal": "rsync -a build/ /mnt/volume_sfo2_02/cj/tinaandcarlton/honeymoon/"
   },
   "homepagelocal": "https://tinaandcarltonhome.com/honeymoon",
   "homepagelocal1": "http://tinaandcarlton.test/honeymoon",
